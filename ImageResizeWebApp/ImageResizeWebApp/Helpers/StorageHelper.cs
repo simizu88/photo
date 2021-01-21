@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ImageResizeWebApp.Helpers
 {
@@ -88,6 +89,7 @@ namespace ImageResizeWebApp.Helpers
                 // Create a SAS URI to the storage account
                 UriBuilder sasUri = new UriBuilder(accountUri);
                 sasUri.Query = sas.ToSasQueryParameters(storageCredential).ToString();
+Trace.WriteLine("Hello, Trace");
 Trace.TraceError("*****Message simizu*****"); 
                 foreach (BlobItem blob in container.GetBlobs())
                 {

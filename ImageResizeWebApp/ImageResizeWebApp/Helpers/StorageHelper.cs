@@ -89,6 +89,7 @@ namespace ImageResizeWebApp.Helpers
                 // Create a SAS URI to the storage account
                 UriBuilder sasUri = new UriBuilder(accountUri);
                 sasUri.Query = sas.ToSasQueryParameters(storageCredential).ToString();
+		Debug.WriteLine("debug mst test") ;
 Trace.WriteLine("Hello, Trace");
 Trace.TraceError("*****Message simizu*****"); 
                 foreach (BlobItem blob in container.GetBlobs())
